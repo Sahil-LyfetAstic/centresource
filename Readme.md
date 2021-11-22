@@ -3,6 +3,7 @@ Built With
 1.Nodejs
 2.express-generator
 3.hbs
+4.Mongodb
 
 
 Getting Started
@@ -28,12 +29,14 @@ v16.6.1
 2.npm
 npm install npm@latest -g
 
+3.Mongodb
+install latest version of Mongodb
 
 Installation
 
 1.clone the repo
 
-https://github.com/Sahil-LyfetAstic/white_rabbit.git
+https://github.com/Sahil-LyfetAstic/centresource.git
 
 2.Install NPM packages
 
