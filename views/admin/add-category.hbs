@@ -1,0 +1,159 @@
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <ul class="breadcrumb breadcrumb-style ">
+                        <li class="breadcrumb-item">
+                            <h4 class="page-title"><a href="/">Admin Home</a></h4>
+                        </li>
+                        <li class="breadcrumb-item bcrumb-1">
+                            <a href="/">
+                                <i class="fas fa-home"></i> Centre Source</a>
+                        </li>
+                        <li class="breadcrumb-item active">Add MainCategory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <section>
+
+            <div class="row clearfix" id="add-us">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <strong>Add Main Category</strong>
+                            </h2>
+                            <br>
+                            <h2 style="text-align: center; display:none" id="error-msg"></h2>
+
+                        </div>
+                        <div class="body" id="subadmin-tdl-status">
+                            <div class="table-responsive">
+                                <form id="add-main-category-form" method="POST" action="add-main-category">
+
+
+
+                                    <div class="form-group col-md-6">
+                                        <label for="main-category">Main Category</label>
+                                        <input type="text" class="form-control" id="main-category" name="category_name"
+                                            placeholder="Main Category" required>
+                                    </div>
+
+
+                                    <button type="submit" id="add-main-category"
+                                        class="btn btn-primary submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="row clearfix" id="add-us">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <strong>Add Sub Category</strong>
+                            </h2>
+                            <br>
+                            <h2 style="text-align: center; display:none" id="error-msg"></h2>
+
+                        </div>
+                        <div class="body" id="subadmin-tdl-status">
+                            <div class="table-responsive">
+                                <form id="add-sub-category-form" method="POST" action="add-sub-category">
+
+
+                                    <div class="form-group">
+                                        <label for="sub-category">Main Category</label>
+                                        <select class="form-select col-md-6" id="main-select" name="mainId">
+                                            {{#each mainCat}}
+                                            <option value="{{this.category_name}}">{{this.category_name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group col-md-6">
+                                        <label for="main-category">SUB Category</label>
+                                        <input type="text" class="form-control" id="sub-category" name="category_name"
+                                            placeholder="Sub Category" required>
+                                    </div>
+
+
+                                    <button type="submit" id="add-sub-category"
+                                        class="btn btn-primary submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="row clearfix" id="add-us">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <strong>Add Products</strong>
+                            </h2>
+                            <br>
+                            <h2 style="text-align: center; display:none" id="error-msg"></h2>
+
+                        </div>
+                        <div class="body" id="subadmin-tdl-status">
+                            <div class="table-responsive">
+                                <form id="add-products">
+
+
+                                    <div class="form-group">
+                                        <label for="sub-category">Main Category</label>
+                                        <select class="form-select col-md-6" id="mainSel" name="mainId">
+                                            <option>Select option</option>
+                                            {{#each mainCat}}
+                                            <option value="{{this.category_name}}">{{this.category_name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="sub-category">sub Category</label>
+                                        <select class="form-select col-md-6" id="sub-select" name="subId">
+
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="main-category">Product Name</label>
+                                        <input type="text" class="form-control" id="product_name" name="product_name"
+                                            placeholder="Product Name" required>
+                                    </div>
+
+
+
+                                    <button type="submit" id="add-product" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
